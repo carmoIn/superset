@@ -48,6 +48,9 @@ SQLALCHEMY_DATABASE_URI = (
     f"{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_DB}"
 )
 
+# Necessário desabilitar essa configuração para permitir requisição ao endpoint /sqllab/execute
+WTF_CSRF_ENABLED = False
+
 SQLALCHEMY_EXAMPLES_URI = (
     f"{DATABASE_DIALECT}://"
     f"{EXAMPLES_USER}:{EXAMPLES_PASSWORD}@"
@@ -99,6 +102,8 @@ WEBDRIVER_BASEURL = "http://superset:8088/"
 WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
 
 SQLLAB_CTAS_NO_LIMIT = True
+
+
 
 #
 # Optionally import superset_config_docker.py (which will have been included on
